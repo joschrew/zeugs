@@ -22,9 +22,9 @@ uvicorn app.main:app --host 0.0.0.0 --reload
 ### Errors:
 - TypeError: unsupported operand type(s) for /: 'tuple' and 'str'
     - https://github.com/koxudaxi/fastapi-code-generator/issues/232
-    - file ~/.local/lib/python3.10/site-packages/datamodel_code_generator/format.py
+    - change file `~/.local/lib/python3.10/site-packages/datamodel_code_generator/format.py`
         - file maybe somewhere else depending on os, installation-method etc.
     - change line 45 from `path = root / "pyproject.toml"` to `path = root[0] / "pyproject.toml"`
 - AssertionError: Path params must be of one of the supported types
     - just remove type for `executable` to workaround error:
-    - sed 's/executable:\ [A-Za-z]*/executable/' app/main.py -i
+    - `sed 's/executable:\ [A-Za-z]*/executable/' app/main.py -i`
