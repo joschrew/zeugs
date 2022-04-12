@@ -14,9 +14,7 @@ Generate webservice skeleton from ocrd's openapi.yml
 - error occurs. [For workaround: errors-section](#Errors)
 
 ### first test-run
-`
-uvicorn app.main:app --host 0.0.0.0 --reload
-`
+`uvicorn app.main:app --host 0.0.0.0 --reload`
 - error occurs. [For workaround: errors-section](#Errors)
 
 ### Errors:
