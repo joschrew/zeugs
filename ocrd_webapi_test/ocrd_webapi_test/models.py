@@ -1,5 +1,6 @@
 from pydantic import BaseModel, Field
 
+
 class DiscoveryResponse(BaseModel):
     ram: int | None = Field(None, description='All available RAM in bytes')
     cpu_cores: int | None = Field(None, description='Number of available CPU cores')
@@ -19,10 +20,12 @@ class DiscoveryResponse(BaseModel):
 
 
 class Resource(BaseModel):
-    _id: str = Field(..., alias='@id', description='URL of this thing')
+    id: str = Field(..., alias='@id', description='URL of this thing')
     description: str | None = Field(None, description='Description of the thing')
+
+    class Config:
+        allow_population_by_field_name = True
 
 
 class Workspace(Resource):
     pass
-
