@@ -11,13 +11,13 @@ Generate webservice skeleton from ocrd's openapi.yml
 
 ### generate stub
 `fastapi-codegen --input openapi.yml --output app`
-- error occurs. [For workaround](# Errors)
+- error occurs. [For workaround: errors-section](#Errors)
 
 ### first test-run
 `
 uvicorn app.main:app --host 0.0.0.0 --reload
 `
-- error occurs. [For workaround](# Errors)
+- error occurs. [For workaround: errors-section](#Errors)
 
 ### Errors:
 - TypeError: unsupported operand type(s) for /: 'tuple' and 'str'
